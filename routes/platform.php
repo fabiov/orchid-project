@@ -85,3 +85,7 @@ Route::screen('example-advanced', ExampleFieldsAdvancedScreen::class)->name('pla
 Route::screen('task', \App\Orchid\Screens\TaskScreen::class)
     ->breadcrumbs(fn (Trail $trail) => $trail->parent('platform.index')->push('Task'))
     ->name('platform.task');
+
+Route::screen('account', \App\Orchid\Screens\AccountScreen::class)
+    ->name('platform.account')
+    ->breadcrumbs(fn (Trail $trail) => $trail->parent('platform.index')->push('Account'));
