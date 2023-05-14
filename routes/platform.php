@@ -89,3 +89,9 @@ Route::screen('task', \App\Orchid\Screens\TaskScreen::class)
 Route::screen('account', \App\Orchid\Screens\AccountScreen::class)
     ->name('platform.account')
     ->breadcrumbs(fn (Trail $trail) => $trail->parent('platform.index')->push('Account'));
+
+Route::screen('category/{post?}', \App\Orchid\Screens\CategoryEditScreen::class)
+    ->name('platform.category.edit');
+
+Route::screen('categories', \App\Orchid\Screens\CategoryListScreen::class)
+    ->name('platform.category.list');
