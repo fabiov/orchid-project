@@ -14,17 +14,32 @@ help:
 
 # Docker containers manipulation commands ##############################################################################
 
+.env:
+	@echo "👷 ${green}Making env file...${reset}"
+	@cp .env.example .env
+	@sed -i "s/WWWUSER=.*/WWWUSER=`id -u`/" .env
+	@sed -i "s/WWWGROUP=.*/WWWGROUP=`id -g`/" .env
+
+vendor:
+	@echo "🏃 ${green}Running composer install...${reset}"
+	@docker run --rm --interactive --tty --volume `pwd`:/app --volume `${COMPOSER_HOME:-$HOME/.composer}`:/tmp composer install
+
+setup: .env vendor
+	@echo "🏃 ${green}Running setup...${reset}"
+	@docker compose exec --user=sail php php artisan key:generate
+	@docker compose exec --user=sail php php artisan migrate:fresh
+	@docker compose exec --user=sail php php artisan db:seed
+
 up:
 	@./vendor/bin/sail up -d
 
 down:
 	@./vendor/bin/sail down
 
-ps status:
-	@docker-compose ps -a
+ps:
+	@docker compose ps -a
 
 # Interactive terminals ################################################################################################
 
 sh console:
-	@if ! docker-compose ps --service --filter 'status=running' | grep php > /dev/null; then ./vendor/bin/sail up -d && echo; fi
-	@docker-compose exec --user=sail php bash
+	@docker compose exec --user=sail php bash
