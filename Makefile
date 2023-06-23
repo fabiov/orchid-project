@@ -43,3 +43,15 @@ ps:
 
 sh console:
 	@docker compose exec --user=sail php bash
+
+# Quality tools ########################################################################################################
+
+sa:
+	@echo "🏃 ${green}Running PHP Static Analysis Tool...${reset}"
+	@docker compose exec --user sail php vendor/bin/phpstan
+
+# artisan commands #####################################################################################################
+
+fresh-db:
+	@docker compose run --rm php php artisan migrate:fresh
+	@docker compose run --rm php php artisan db:seed

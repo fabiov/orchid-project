@@ -1,0 +1,796 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method App\\\\Http\\\\Middleware\\\\Authenticate\\:\\:redirectTo\\(\\) should return string\\|null but return statement is missing\\.$#"
+			count: 1
+			path: app/Http/Middleware/Authenticate.php
+
+		-
+			message: "#^Method App\\\\Http\\\\Middleware\\\\RedirectIfAuthenticated\\:\\:handle\\(\\) should return Illuminate\\\\Http\\\\RedirectResponse\\|Illuminate\\\\Http\\\\Response but returns Illuminate\\\\Http\\\\RedirectResponse\\|Illuminate\\\\Routing\\\\Redirector\\.$#"
+			count: 1
+			path: app/Http/Middleware/RedirectIfAuthenticated.php
+
+		-
+			message: "#^Property App\\\\Models\\\\User\\:\\:\\$allowedFilters type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Models/User.php
+
+		-
+			message: "#^Property App\\\\Models\\\\User\\:\\:\\$allowedSorts type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Models/User.php
+
+		-
+			message: "#^Property App\\\\Models\\\\User\\:\\:\\$casts type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Models/User.php
+
+		-
+			message: "#^Property App\\\\Models\\\\User\\:\\:\\$fillable type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Models/User.php
+
+		-
+			message: "#^Property App\\\\Models\\\\User\\:\\:\\$hidden type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Models/User.php
+
+		-
+			message: "#^Call to an undefined static method Orchid\\\\Platform\\\\Models\\\\Role\\:\\:where\\(\\)\\.$#"
+			count: 1
+			path: app/Orchid/Filters/RoleFilter.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Filters\\\\RoleFilter\\:\\:name\\(\\) should return string but returns array\\|string\\|null\\.$#"
+			count: 1
+			path: app/Orchid/Filters/RoleFilter.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Filters\\\\RoleFilter\\:\\:parameters\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Orchid/Filters/RoleFilter.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of method Orchid\\\\Screen\\\\Fields\\\\Select\\:\\:title\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 1
+			path: app/Orchid/Filters/RoleFilter.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Layouts\\\\CategoryListLayout\\:\\:columns\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/CategoryListLayout.php
+
+		-
+			message: "#^Parameter \\#2 \\$parameters of method Orchid\\\\Screen\\\\Actions\\\\Link\\:\\:route\\(\\) expects array, App\\\\Models\\\\Category given\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/CategoryListLayout.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Layouts\\\\Examples\\\\ChartLineExample\\:\\:markers\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Examples/ChartLineExample.php
+
+		-
+			message: "#^Property App\\\\Orchid\\\\Layouts\\\\Examples\\\\ChartLineExample\\:\\:\\$lineOptions type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Examples/ChartLineExample.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of method Orchid\\\\Screen\\\\Fields\\\\Input\\:\\:help\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 2
+			path: app/Orchid/Layouts/Role/RoleEditLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of method Orchid\\\\Screen\\\\Fields\\\\Input\\:\\:placeholder\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 2
+			path: app/Orchid/Layouts/Role/RoleEditLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of method Orchid\\\\Screen\\\\Fields\\\\Input\\:\\:title\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 2
+			path: app/Orchid/Layouts/Role/RoleEditLayout.php
+
+		-
+			message: "#^Access to an undefined property Orchid\\\\Platform\\\\Models\\\\Role\\:\\:\\$created_at\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Role/RoleListLayout.php
+
+		-
+			message: "#^Access to an undefined property Orchid\\\\Platform\\\\Models\\\\Role\\:\\:\\$id\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Role/RoleListLayout.php
+
+		-
+			message: "#^Access to an undefined property Orchid\\\\Platform\\\\Models\\\\Role\\:\\:\\$name\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Role/RoleListLayout.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Layouts\\\\Role\\\\RoleListLayout\\:\\:columns\\(\\) should return array\\<Orchid\\\\Screen\\\\TD\\> but returns array\\<int, Orchid\\\\Screen\\\\Cell\\>\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Role/RoleListLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$filter of method Orchid\\\\Screen\\\\TD\\:\\:filter\\(\\) expects string, Orchid\\\\Screen\\\\Fields\\\\Input given\\.$#"
+			count: 2
+			path: app/Orchid/Layouts/Role/RoleListLayout.php
+
+		-
+			message: "#^Parameter \\#2 \\$title of static method Orchid\\\\Screen\\\\Cell\\:\\:make\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 3
+			path: app/Orchid/Layouts/Role/RoleListLayout.php
+
+		-
+			message: "#^Cannot call method hasAccess\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Role/RolePermissionLayout.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Layouts\\\\Role\\\\RolePermissionLayout\\:\\:generatedPermissionFields\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Role/RolePermissionLayout.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Layouts\\\\Role\\\\RolePermissionLayout\\:\\:getIndeterminateStatus\\(\\) has parameter \\$slug with no type specified\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Role/RolePermissionLayout.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Layouts\\\\Role\\\\RolePermissionLayout\\:\\:getIndeterminateStatus\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Role/RolePermissionLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of method Illuminate\\\\Support\\\\Collection\\<\\(int\\|string\\),mixed\\>\\:\\:map\\(\\) expects callable\\(mixed, int\\|string\\)\\: Illuminate\\\\Support\\\\Collection, Closure\\(Illuminate\\\\Support\\\\Collection, mixed\\)\\: Illuminate\\\\Support\\\\Collection given\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Role/RolePermissionLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of method Illuminate\\\\Support\\\\Collection\\<\\(int\\|string\\),mixed\\>\\:\\:map\\(\\) expects callable\\(mixed, int\\|string\\)\\: Orchid\\\\Screen\\\\Fields\\\\CheckBox, Closure\\(array\\)\\: Orchid\\\\Screen\\\\Fields\\\\CheckBox given\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Role/RolePermissionLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of method Illuminate\\\\Support\\\\Collection\\<int,mixed\\>\\:\\:map\\(\\) expects callable\\(mixed, int\\)\\: Orchid\\\\Screen\\\\Fields\\\\CheckBox, Closure\\(Orchid\\\\Screen\\\\Fields\\\\CheckBox, mixed\\)\\: Orchid\\\\Screen\\\\Fields\\\\CheckBox given\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Role/RolePermissionLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$permissionsRaw of method App\\\\Orchid\\\\Layouts\\\\Role\\\\RolePermissionLayout\\:\\:generatedPermissionFields\\(\\) expects Illuminate\\\\Support\\\\Collection, mixed given\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Role/RolePermissionLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function base64_encode expects string, mixed given\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Role/RolePermissionLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of method Orchid\\\\Screen\\\\Fields\\\\CheckBox\\:\\:placeholder\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Role/RolePermissionLayout.php
+
+		-
+			message: "#^Property App\\\\Orchid\\\\Layouts\\\\Role\\\\RolePermissionLayout\\:\\:\\$user \\(Orchid\\\\Platform\\\\Models\\\\User\\|null\\) does not accept mixed\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/Role/RolePermissionLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of method Orchid\\\\Screen\\\\Fields\\\\Password\\:\\:placeholder\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 3
+			path: app/Orchid/Layouts/User/ProfilePasswordLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of method Orchid\\\\Screen\\\\Fields\\\\Password\\:\\:title\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 3
+			path: app/Orchid/Layouts/User/ProfilePasswordLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of method Orchid\\\\Screen\\\\Fields\\\\Input\\:\\:placeholder\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 2
+			path: app/Orchid/Layouts/User/UserEditLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of method Orchid\\\\Screen\\\\Fields\\\\Input\\:\\:title\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 2
+			path: app/Orchid/Layouts/User/UserEditLayout.php
+
+		-
+			message: "#^Access to an undefined property Orchid\\\\Platform\\\\Models\\\\User\\:\\:\\$email\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/User/UserListLayout.php
+
+		-
+			message: "#^Access to an undefined property Orchid\\\\Platform\\\\Models\\\\User\\:\\:\\$id\\.$#"
+			count: 3
+			path: app/Orchid/Layouts/User/UserListLayout.php
+
+		-
+			message: "#^Access to an undefined property Orchid\\\\Platform\\\\Models\\\\User\\:\\:\\$updated_at\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/User/UserListLayout.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Layouts\\\\User\\\\UserListLayout\\:\\:columns\\(\\) should return array\\<Orchid\\\\Screen\\\\TD\\> but returns array\\<int, Orchid\\\\Screen\\\\Cell\\>\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/User/UserListLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$confirm of method Orchid\\\\Screen\\\\Actions\\\\Button\\:\\:confirm\\(\\) expects string, array\\|string\\|null given\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/User/UserListLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$filter of method Orchid\\\\Screen\\\\TD\\:\\:filter\\(\\) expects string, Orchid\\\\Screen\\\\Fields\\\\Input given\\.$#"
+			count: 2
+			path: app/Orchid/Layouts/User/UserListLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of static method Orchid\\\\Screen\\\\Cell\\:\\:make\\(\\) expects string, array\\|string\\|null given\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/User/UserListLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of static method Orchid\\\\Screen\\\\Field\\:\\:make\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 2
+			path: app/Orchid/Layouts/User/UserListLayout.php
+
+		-
+			message: "#^Parameter \\#2 \\$title of static method Orchid\\\\Screen\\\\Cell\\:\\:make\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 3
+			path: app/Orchid/Layouts/User/UserListLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of method Orchid\\\\Screen\\\\Fields\\\\Password\\:\\:placeholder\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/User/UserPasswordLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of method Orchid\\\\Screen\\\\Fields\\\\Password\\:\\:title\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/User/UserPasswordLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of method Orchid\\\\Screen\\\\Fields\\\\Select\\:\\:title\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 1
+			path: app/Orchid/Layouts/User/UserRoleLayout.php
+
+		-
+			message: "#^Parameter \\#1 \\$group of static method Orchid\\\\Platform\\\\ItemPermission\\:\\:group\\(\\) expects string, array\\|string\\|null given\\.$#"
+			count: 1
+			path: app/Orchid/PlatformProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of static method Orchid\\\\Screen\\\\Field\\:\\:make\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 3
+			path: app/Orchid/PlatformProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$title of method Orchid\\\\Screen\\\\Actions\\\\Menu\\:\\:title\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 1
+			path: app/Orchid/PlatformProvider.php
+
+		-
+			message: "#^Parameter \\#2 \\$color of method Orchid\\\\Screen\\\\Actions\\\\Menu\\:\\:badge\\(\\) expects Orchid\\\\Support\\\\Color\\|null, Orchid\\\\Support\\\\Color\\|string given\\.$#"
+			count: 1
+			path: app/Orchid/PlatformProvider.php
+
+		-
+			message: "#^Parameter \\#2 \\$name of method Orchid\\\\Platform\\\\ItemPermission\\:\\:addPermission\\(\\) expects string, array\\|string\\|null given\\.$#"
+			count: 2
+			path: app/Orchid/PlatformProvider.php
+
+		-
+			message: "#^Access to an undefined property object\\:\\:\\$email\\.$#"
+			count: 1
+			path: app/Orchid/Presenters/UserPresenter.php
+
+		-
+			message: "#^Access to an undefined property object\\:\\:\\$name\\.$#"
+			count: 1
+			path: app/Orchid/Presenters/UserPresenter.php
+
+		-
+			message: "#^Access to an undefined property object\\:\\:\\$roles\\.$#"
+			count: 1
+			path: app/Orchid/Presenters/UserPresenter.php
+
+		-
+			message: "#^Call to an undefined method object\\:\\:search\\(\\)\\.$#"
+			count: 1
+			path: app/Orchid/Presenters/UserPresenter.php
+
+		-
+			message: "#^Call to an undefined static method App\\\\Models\\\\Account\\:\\:latest\\(\\)\\.$#"
+			count: 1
+			path: app/Orchid/Screens/AccountScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\AccountScreen\\:\\:create\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: app/Orchid/Screens/AccountScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\AccountScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/AccountScreen.php
+
+		-
+			message: "#^Property App\\\\Models\\\\Account\\:\\:\\$name \\(string\\) does not accept mixed\\.$#"
+			count: 1
+			path: app/Orchid/Screens/AccountScreen.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Http\\\\RedirectResponse\\|Illuminate\\\\Routing\\\\Redirector\\:\\:route\\(\\)\\.$#"
+			count: 2
+			path: app/Orchid/Screens/CategoryEditScreen.php
+
+		-
+			message: "#^Cannot access offset 'name' on mixed\\.$#"
+			count: 1
+			path: app/Orchid/Screens/CategoryEditScreen.php
+
+		-
+			message: "#^Cannot access offset 'user' on mixed\\.$#"
+			count: 1
+			path: app/Orchid/Screens/CategoryEditScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\CategoryEditScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/CategoryEditScreen.php
+
+		-
+			message: "#^Property App\\\\Models\\\\Category\\:\\:\\$name \\(string\\) does not accept mixed\\.$#"
+			count: 1
+			path: app/Orchid/Screens/CategoryEditScreen.php
+
+		-
+			message: "#^Property App\\\\Models\\\\Category\\:\\:\\$user_id \\(int\\) does not accept mixed\\.$#"
+			count: 1
+			path: app/Orchid/Screens/CategoryEditScreen.php
+
+		-
+			message: "#^Call to an undefined static method App\\\\Models\\\\Category\\:\\:paginate\\(\\)\\.$#"
+			count: 1
+			path: app/Orchid/Screens/CategoryListScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\CategoryListScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/CategoryListScreen.php
+
+		-
+			message: "#^Access to an undefined property Orchid\\\\Platform\\\\Models\\\\User\\:\\:\\$email_verified_at\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleCardsScreen.php
+
+		-
+			message: "#^Call to an undefined static method Orchid\\\\Platform\\\\Models\\\\User\\:\\:firstOrFail\\(\\)\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleCardsScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\Examples\\\\ExampleCardsScreen\\:\\:layout\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleCardsScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\Examples\\\\ExampleCardsScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleCardsScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$message of static method Orchid\\\\Alert\\\\Alert\\:\\:warning\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleCardsScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$visual of method Orchid\\\\Screen\\\\Action\\:\\:type\\(\\) expects Orchid\\\\Support\\\\Color, Orchid\\\\Support\\\\Color\\|string given\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleCardsScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\Examples\\\\ExampleChartsScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleChartsScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\Examples\\\\ExampleFieldsAdvancedScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleFieldsAdvancedScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\Examples\\\\ExampleFieldsScreen\\:\\:buttonClickProcessing\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleFieldsScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\Examples\\\\ExampleFieldsScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleFieldsScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$visual of method Orchid\\\\Screen\\\\Action\\:\\:type\\(\\) expects Orchid\\\\Support\\\\Color, Orchid\\\\Support\\\\Color\\|string given\\.$#"
+			count: 11
+			path: app/Orchid/Screens/Examples/ExampleFieldsScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\Examples\\\\ExampleLayoutsScreen\\:\\:layout\\(\\) should return iterable\\<Orchid\\\\Screen\\\\Layout\\> but returns array\\<int, Orchid\\\\Screen\\\\Layouts\\\\Accordion\\|Orchid\\\\Screen\\\\Layouts\\\\Block\\|Orchid\\\\Screen\\\\Layouts\\\\Columns\\|Orchid\\\\Screen\\\\Layouts\\\\Tabs\\|Orchid\\\\Screen\\\\Layouts\\\\View\\|string\\>\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleLayoutsScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\Examples\\\\ExampleLayoutsScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleLayoutsScreen.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Contracts\\\\Routing\\\\ResponseFactory\\|Illuminate\\\\Http\\\\Response\\:\\:streamDownload\\(\\)\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleScreen.php
+
+		-
+			message: "#^Call to an undefined method Orchid\\\\Screen\\\\Field\\:\\:icon\\(\\)\\.$#"
+			count: 2
+			path: app/Orchid/Screens/Examples/ExampleScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\Examples\\\\ExampleScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$message of static method Orchid\\\\Alert\\\\Alert\\:\\:warning\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$num of function number_format expects float, mixed given\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$stream of function fputcsv expects resource, mixed given\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of static method Illuminate\\\\Support\\\\Str\\:\\:limit\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleScreen.php
+
+		-
+			message: "#^Part \\$model\\-\\>get\\('id'\\) \\(mixed\\) of encapsed string cannot be cast to string\\.$#"
+			count: 2
+			path: app/Orchid/Screens/Examples/ExampleScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\Examples\\\\ExampleTextEditorsScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleTextEditorsScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of static method Illuminate\\\\Support\\\\Str\\:\\:limit\\(\\) expects string, string\\|false given\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Examples/ExampleTextEditorsScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\PlatformScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/PlatformScreen.php
+
+		-
+			message: "#^Access to an undefined property Orchid\\\\Platform\\\\Models\\\\Role\\:\\:\\$permissions\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Role/RoleEditScreen.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Http\\\\RedirectResponse\\|Illuminate\\\\Routing\\\\Redirector\\:\\:route\\(\\)\\.$#"
+			count: 2
+			path: app/Orchid/Screens/Role/RoleEditScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\Role\\\\RoleEditScreen\\:\\:permission\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Role/RoleEditScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\Role\\\\RoleEditScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Role/RoleEditScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$attributes of method Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:fill\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Role/RoleEditScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$message of static method Orchid\\\\Alert\\\\Alert\\:\\:info\\(\\) expects string, array\\|string\\|null given\\.$#"
+			count: 2
+			path: app/Orchid/Screens/Role/RoleEditScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of static method Orchid\\\\Screen\\\\Field\\:\\:make\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 2
+			path: app/Orchid/Screens/Role/RoleEditScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of function collect expects Illuminate\\\\Contracts\\\\Support\\\\Arrayable\\<\\(int\\|string\\), mixed\\>\\|iterable\\<\\(int\\|string\\), mixed\\>\\|null, mixed given\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Role/RoleEditScreen.php
+
+		-
+			message: "#^Unable to resolve the template type TKey in call to function collect$#"
+			count: 1
+			path: app/Orchid/Screens/Role/RoleEditScreen.php
+
+		-
+			message: "#^Unable to resolve the template type TValue in call to function collect$#"
+			count: 1
+			path: app/Orchid/Screens/Role/RoleEditScreen.php
+
+		-
+			message: "#^Call to an undefined static method Orchid\\\\Platform\\\\Models\\\\Role\\:\\:filters\\(\\)\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Role/RoleListScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\Role\\\\RoleListScreen\\:\\:permission\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Role/RoleListScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\Role\\\\RoleListScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Role/RoleListScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of static method Orchid\\\\Screen\\\\Field\\:\\:make\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 1
+			path: app/Orchid/Screens/Role/RoleListScreen.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Task\\:\\:\\$id\\.$#"
+			count: 1
+			path: app/Orchid/Screens/TaskScreen.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Task\\:\\:\\$name\\.$#"
+			count: 1
+			path: app/Orchid/Screens/TaskScreen.php
+
+		-
+			message: "#^Call to an undefined static method App\\\\Models\\\\Task\\:\\:latest\\(\\)\\.$#"
+			count: 1
+			path: app/Orchid/Screens/TaskScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\TaskScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/TaskScreen.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Builder\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$password\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Access to an undefined property Orchid\\\\Platform\\\\Models\\\\User\\:\\:\\$id\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Http\\\\RedirectResponse\\|Illuminate\\\\Routing\\\\Redirector\\:\\:route\\(\\)\\.$#"
+			count: 3
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Call to an undefined method Orchid\\\\Platform\\\\Models\\\\User\\:\\:when\\(\\)\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Cannot call method user\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\User\\\\UserEditScreen\\:\\:permission\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\User\\\\UserEditScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$confirm of method Orchid\\\\Screen\\\\Actions\\\\Button\\:\\:confirm\\(\\) expects string, array\\|string\\|null given\\.$#"
+			count: 2
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$message of static method Orchid\\\\Alert\\\\Alert\\:\\:info\\(\\) expects string, array\\|string\\|null given\\.$#"
+			count: 3
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of static method Orchid\\\\Screen\\\\Field\\:\\:make\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 7
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$roles of method Orchid\\\\Platform\\\\Models\\\\User\\:\\:replaceRoles\\(\\) expects array\\|null, mixed given\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$title of method Orchid\\\\Screen\\\\Layouts\\\\Block\\:\\:title\\(\\) expects string, array\\|string\\|null given\\.$#"
+			count: 4
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of function collect expects Illuminate\\\\Contracts\\\\Support\\\\Arrayable\\<\\(int\\|string\\), mixed\\>\\|iterable\\<\\(int\\|string\\), mixed\\>\\|null, mixed given\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of static method Illuminate\\\\Support\\\\Facades\\\\Hash\\:\\:make\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$visual of method Orchid\\\\Screen\\\\Action\\:\\:type\\(\\) expects Orchid\\\\Support\\\\Color, Orchid\\\\Support\\\\Color\\|string given\\.$#"
+			count: 4
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Unable to resolve the template type TKey in call to function collect$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Unable to resolve the template type TValue in call to function collect$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserEditScreen.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:filters\\(\\)\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserListScreen.php
+
+		-
+			message: "#^Call to an undefined static method Orchid\\\\Platform\\\\Models\\\\User\\:\\:findOrFail\\(\\)\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserListScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\User\\\\UserListScreen\\:\\:asyncGetUser\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserListScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\User\\\\UserListScreen\\:\\:permission\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserListScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\User\\\\UserListScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserListScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$attributes of method Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:fill\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserListScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$message of static method Orchid\\\\Alert\\\\Alert\\:\\:info\\(\\) expects string, array\\|string\\|null given\\.$#"
+			count: 2
+			path: app/Orchid/Screens/User/UserListScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of static method Orchid\\\\Screen\\\\Field\\:\\:make\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserListScreen.php
+
+		-
+			message: "#^Cannot call method fill\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserProfileScreen.php
+
+		-
+			message: "#^Cannot call method save\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserProfileScreen.php
+
+		-
+			message: "#^Method App\\\\Orchid\\\\Screens\\\\User\\\\UserProfileScreen\\:\\:query\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserProfileScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$message of static method Orchid\\\\Alert\\\\Alert\\:\\:info\\(\\) expects string, array\\|string\\|null given\\.$#"
+			count: 2
+			path: app/Orchid/Screens/User/UserProfileScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of static method Orchid\\\\Screen\\\\Field\\:\\:make\\(\\) expects string\\|null, array\\|string\\|null given\\.$#"
+			count: 2
+			path: app/Orchid/Screens/User/UserProfileScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$title of method Orchid\\\\Screen\\\\Layouts\\\\Block\\:\\:title\\(\\) expects string, array\\|string\\|null given\\.$#"
+			count: 2
+			path: app/Orchid/Screens/User/UserProfileScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of static method Illuminate\\\\Support\\\\Facades\\\\Hash\\:\\:make\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: app/Orchid/Screens/User/UserProfileScreen.php
+
+		-
+			message: "#^Parameter \\#1 \\$visual of method Orchid\\\\Screen\\\\Action\\:\\:type\\(\\) expects Orchid\\\\Support\\\\Color, Orchid\\\\Support\\\\Color\\|string given\\.$#"
+			count: 2
+			path: app/Orchid/Screens/User/UserProfileScreen.php
+
+		-
+			message: "#^Cannot access property \\$id on mixed\\.$#"
+			count: 1
+			path: app/Providers/RouteServiceProvider.php
+
+		-
+			message: "#^Method CreateOrchidUsersTable\\:\\:down\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: database/migrations/2015_04_12_000000_create_orchid_users_table.php
+
+		-
+			message: "#^Method CreateOrchidUsersTable\\:\\:up\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: database/migrations/2015_04_12_000000_create_orchid_users_table.php
+
+		-
+			message: "#^Method CreateOrchidRolesTable\\:\\:down\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: database/migrations/2015_10_19_214424_create_orchid_roles_table.php
+
+		-
+			message: "#^Method CreateOrchidRolesTable\\:\\:up\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: database/migrations/2015_10_19_214424_create_orchid_roles_table.php
+
+		-
+			message: "#^Method CreateOrchidRoleUsersTable\\:\\:down\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: database/migrations/2015_10_19_214425_create_orchid_role_users_table.php
+
+		-
+			message: "#^Method CreateOrchidRoleUsersTable\\:\\:up\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: database/migrations/2015_10_19_214425_create_orchid_role_users_table.php
+
+		-
+			message: "#^Method CreateOrchidAttachmentstableTable\\:\\:down\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: database/migrations/2016_08_07_125128_create_orchid_attachmentstable_table.php
+
+		-
+			message: "#^Method CreateOrchidAttachmentstableTable\\:\\:up\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: database/migrations/2016_08_07_125128_create_orchid_attachmentstable_table.php
+
+		-
+			message: "#^Undefined variable\\: \\$this$#"
+			count: 1
+			path: routes/console.php
+
+		-
+			message: "#^Call to an undefined static method Illuminate\\\\Support\\\\Facades\\\\Route\\:\\:screen\\(\\)\\.$#"
+			count: 19
+			path: routes/platform.php
+
+		-
+			message: "#^Parameter \\#1 \\$title of method Tabuna\\\\Breadcrumbs\\\\Trail\\:\\:push\\(\\) expects string, array\\|string\\|null given\\.$#"
+			count: 7
+			path: routes/platform.php
