@@ -32,5 +32,5 @@ sh: up
 # Miscellaneous Macro ##################################################################################################
 
 fresh-db:
-	@docker-compose run --rm php php artisan migrate:fresh
-	@docker-compose run --rm php php artisan db:seed
+	@./vendor/bin/sail artisan migrate:fresh
+	@./vendor/bin/sail artisan db:seed
