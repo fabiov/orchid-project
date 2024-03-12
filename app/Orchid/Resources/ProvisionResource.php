@@ -5,30 +5,28 @@ declare(strict_types=1);
 namespace App\Orchid\Resources;
 
 use App\Models\Account;
-use App\Models\Category;
+use App\Models\Provision;
+use Illuminate\Support\Facades\Auth;
 use Orchid\Crud\Resource;
+use Orchid\Crud\ResourceRequest;
 use Orchid\Screen\Field;
 use Orchid\Screen\Fields\DateTimer;
 use Orchid\Screen\Fields\Input;
-use Orchid\Screen\Fields\Relation;
-use Orchid\Screen\Fields\Select;
 use Orchid\Screen\Sight;
 use Orchid\Screen\TD;
 
-class MovementResource extends Resource
+class ProvisionResource extends Resource
 {
-    public static $model = \App\Models\Movement::class;
+    public static $model = Provision::class;
 
     /**
+     * Get the fields displayed by the resource.
+     *
      * @return array<Field>
      */
     public function fields(): array
     {
         return [
-            Relation::make('account_id')
-                ->fromModel(Account::class, 'name')
-                ->required()
-                ->title('Account'),
             DateTimer::make('date')
                 ->format('Y-m-d')
                 ->required()
@@ -41,10 +39,6 @@ class MovementResource extends Resource
             Input::make('description')
                 ->required()
                 ->title('Description'),
-            Select::make('category_id')
-                ->empty('No select')
-                ->fromModel(Category::class, 'name')
-                ->title('Category'),
         ];
     }
 
@@ -55,8 +49,11 @@ class MovementResource extends Resource
     {
         return [
             TD::make('id'),
+            TD::make('date'),
+            TD::make('amount'),
+            TD::make('description'),
             TD::make('created_at', 'Date of creation')
-                ->render(fn ($model) => $model->created_at->toDateTimeString()),
+                ->render(fn ($model) =>  $model->created_at->toDateTimeString()),
             TD::make('updated_at', 'Update date')
                 ->render(fn ($model) => $model->updated_at->toDateTimeString()),
         ];
@@ -76,5 +73,15 @@ class MovementResource extends Resource
     public function filters(): array
     {
         return [];
+    }
+
+    public function onSave(ResourceRequest $request, Provision $model): void
+    {
+        $model->user_id = Auth::getUser()->id;
+        $model->description = $request->get('description');
+        $model->amount = $request->get('amount');
+        $model->date = $request->get('date');
+
+        $model->save();
     }
 }

@@ -34,8 +34,8 @@ class AccountResource extends Resource
             Select::make('status')
                 ->title('Status')
                 ->options([
-                    'closed' => 'Closed', 
-                    'open' => 'Open', 
+                    'closed' => 'Closed',
+                    'open' => 'Open',
                     'highlight' => 'Highlight',
                 ]),
         ];
@@ -83,7 +83,7 @@ class AccountResource extends Resource
         return [];
     }
 
-    public function onSave(ResourceRequest $request, Account $model)
+    public function onSave(ResourceRequest $request, Account $model): void
     {
         $model->user_id = Auth::getUser()->id;
         $model->name = $request->get('name');
