@@ -52,7 +52,7 @@ class CategoryResource extends Resource
             TD::make('id'),
             TD::make('name'),
             TD::make('active')
-                ->render(fn (Category $model) => $model->active ? 'Sì' : 'No'),
+                ->render(fn (Category $model) => $model->active ? 'Yes' : 'No'),
             TD::make('created_at', 'Date of creation')
                 ->render(fn (Category $model) => $model->created_at->toDateTimeString()),
             TD::make('updated_at', 'Update date')
