@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -10,44 +12,26 @@ use Orchid\Platform\Models\User as Authenticatable;
 
 /**
  * @property array<Category> $categories
+ * @property int $id
  */
 class User extends Authenticatable
 {
     /**
-     * The attributes that are mass assignable.
-     *
      * @var array<string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    protected $fillable = ['name', 'email', 'password'];
 
     /**
-     * The attributes excluded from the model's JSON form.
-     *
      * @var array<string>
      */
-    protected $hidden = [
-        'password',
-        'remember_token',
-        'permissions',
-    ];
+    protected $hidden = ['password', 'remember_token', 'permissions'];
 
     /**
-     * The attributes that should be cast to native types.
-     *
      * @var array<string, string>
      */
-    protected $casts = [
-        'permissions'          => 'array',
-        'email_verified_at'    => 'datetime',
-    ];
+    protected $casts = ['permissions' => 'array', 'email_verified_at' => 'datetime'];
 
     /**
-     * The attributes for which you can use filters in url.
-     *
      * @var array<string, string>
      */
     protected $allowedFilters = [
