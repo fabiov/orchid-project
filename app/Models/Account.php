@@ -16,6 +16,7 @@ use Orchid\Screen\AsSource;
  * @property Carbon $created_at
  * @property int $user_id
  * @property string $name
+ * @property string $status
  */
 class Account extends Model
 {
