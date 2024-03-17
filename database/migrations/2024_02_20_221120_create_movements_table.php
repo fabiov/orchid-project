@@ -14,7 +14,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('account_id')->nullable(false);
             $table->unsignedBigInteger('category_id')->nullable(true);
-            $table->dateTime('date')->nullable(false);
+            $table->date('date')->nullable(false);
             $table->decimal('amount', 8, 2)->nullable(false);
             $table->string('description')->nullable(false);
             $table->timestamps();
