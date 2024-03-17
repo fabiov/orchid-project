@@ -6,7 +6,13 @@ namespace App\Orchid\Resources;
 
 use App\Models\Account;
 use App\Models\Category;
+use App\Models\Movement;
+use App\Orchid\Filters\DescriptionFilter;
+use App\Orchid\Filters\UserFilter;
+use Illuminate\Contracts\Container\BindingResolutionException;
+use Orchid\Crud\Filters\DefaultSorted;
 use Orchid\Crud\Resource;
+use Orchid\Filters\Filter;
 use Orchid\Screen\Field;
 use Orchid\Screen\Fields\DateTimer;
 use Orchid\Screen\Fields\Input;
@@ -17,10 +23,11 @@ use Orchid\Screen\TD;
 
 class MovementResource extends Resource
 {
-    public static $model = \App\Models\Movement::class;
+    public static $model = Movement::class;
 
     /**
      * @return array<Field>
+     * @throws BindingResolutionException
      */
     public function fields(): array
     {
@@ -34,10 +41,10 @@ class MovementResource extends Resource
                 ->required()
                 ->title('Date'),
             Input::make('amount')
-                ->inlineAttributes(['step' => '0.01'])
                 ->required()
-                ->type('number')
-                ->title('Amount'),
+                ->step(0.01)
+                ->title('Amount')
+                ->type('number'),
             Input::make('description')
                 ->required()
                 ->title('Description'),
@@ -54,11 +61,11 @@ class MovementResource extends Resource
     public function columns(): array
     {
         return [
-            TD::make('id'),
-            TD::make('created_at', 'Date of creation')
-                ->render(fn ($model) => $model->created_at->toDateTimeString()),
-            TD::make('updated_at', 'Update date')
-                ->render(fn ($model) => $model->updated_at->toDateTimeString()),
+            TD::make('date')->render(fn (Movement $movement) => $movement->date),
+            TD::make('amount')->align(TD::ALIGN_RIGHT),
+            TD::make('description')->width(550),
+            TD::make('account', 'Account')->render(fn (Movement $movement) => $movement->account->name),
+            TD::make('category', 'Category')->render(fn (Movement $movement) => $movement->category?->name),
         ];
     }
 
@@ -67,14 +74,26 @@ class MovementResource extends Resource
      */
     public function legend(): array
     {
-        return [];
+        return [
+            Sight::make('id'),
+            Sight::make('date')->render(fn (Movement $movement) => $movement->date),
+            Sight::make('amount'),
+            Sight::make('description'),
+            Sight::make('created_at', 'Date of creation')
+                ->render(fn (Movement $model) => $model->created_at?->toDateTimeString()),
+            Sight::make('updated_at', 'Update date')
+                ->render(fn (Movement $model) => $model->updated_at?->toDateTimeString()),
+        ];
     }
 
     /**
-     * @return array
+     * @return array<Filter>
      */
     public function filters(): array
     {
-        return [];
+        return [
+            new DefaultSorted('date', 'desc'),
+            new UserFilter(),
+        ];
     }
 }

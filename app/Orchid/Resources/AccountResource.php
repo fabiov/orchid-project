@@ -1,11 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Orchid\Resources;
 
 use App\Models\Account;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Orchid\Crud\Resource;
 use Orchid\Crud\ResourceRequest;
+use Orchid\Filters\Filter;
+use Orchid\Screen\Field;
 use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Fields\Select;
 use Orchid\Screen\Sight;
@@ -14,16 +19,12 @@ use Orchid\Screen\TD;
 class AccountResource extends Resource
 {
     /**
-     * The model the resource corresponds to.
-     *
      * @var string
      */
-    public static $model = \App\Models\Account::class;
+    public static $model = Account::class;
 
     /**
-     * Get the fields displayed by the resource.
-     *
-     * @return array
+     * @return array<Field>
      */
     public function fields(): array
     {
@@ -33,16 +34,12 @@ class AccountResource extends Resource
                 ->placeholder('Enter name here'),
             Select::make('status')
                 ->title('Status')
-                ->options([
-                    'closed' => 'Closed',
-                    'open' => 'Open',
-                    'highlight' => 'Highlight',
-                ]),
+                ->options(['closed' => 'Closed', 'open' => 'Open', 'highlight' => 'Highlight']),
         ];
     }
 
     /**
-     * @return TD[]
+     * @return array<TD>
      */
     public function columns(): array
     {
@@ -51,18 +48,14 @@ class AccountResource extends Resource
             TD::make('name'),
             TD::make('status'),
             TD::make('created_at', 'Date of creation')
-                ->render(function ($model) {
-                    return $model->created_at->toDateTimeString();
-                }),
+                ->render(fn (Account $model) => $model->created_at->toDateTimeString()),
             TD::make('updated_at', 'Update date')
-                ->render(function ($model) {
-                    return $model->updated_at->toDateTimeString();
-                }),
+                ->render(fn (Account $model) => $model->updated_at?->toDateTimeString()),
         ];
     }
 
     /**
-     * @return Sight[]
+     * @return array<Sight>
      */
     public function legend(): array
     {
@@ -74,9 +67,7 @@ class AccountResource extends Resource
     }
 
     /**
-     * Get the filters available for the resource.
-     *
-     * @return array
+     * @return array<Filter>
      */
     public function filters(): array
     {
@@ -85,7 +76,10 @@ class AccountResource extends Resource
 
     public function onSave(ResourceRequest $request, Account $model): void
     {
-        $model->user_id = Auth::getUser()->id;
+        /** @var User $user */
+        $user = Auth::getUser();
+
+        $model->user_id = $user->id;
         $model->name = $request->get('name');
         $model->status = $request->get('status');
 
