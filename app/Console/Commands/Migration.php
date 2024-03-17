@@ -51,15 +51,16 @@ class Migration extends Command
     {
         $i = 0;
         $select = 'SELECT * FROM user WHERE id IN (1, 21)';
-        $insert = 'INSERT INTO users (id, name, email, password, created_at) VALUES (?, ?, ?, ?, ?)';
+        $insert = 'INSERT INTO users (id, name, email, password, created_at, permissions) VALUES (?, ?, ?, ?, ?, ?)';
 
         foreach ($this->old->select($select) as $row) {
             $this->new->insert($insert, [
                 $row->id,
                 $row->name,
                 $row->email,
-                '',
+                '$2y$12$4cnyVs3kHyWX.4BKttqCK.vrKx5RaGGnaUDGTlEPhe39ph6R/H8IC',
                 date('Y-m-d H:i:s'),
+                '{"platform.index": true, "platform.systems.roles": true, "platform.systems.users": true, "platform.systems.attachment": true}',
             ]);
 
             $i++;
